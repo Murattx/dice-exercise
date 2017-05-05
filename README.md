@@ -10,10 +10,10 @@ This was a coding exercise given to me by a prospective employer. It specified t
 
 The output should look similar to this:
 
-> Rolling 1 die: 4
-> Rolling 2 dice in a cup: 8
-> Rolling 6 dice in a cup: 23
-> Rolling 12 dice in a cup: 41
-> Rolling 120 dice in a cup: 415
-> Rolling a loaded die set to '1': 1
-> Rolling a loaded die set to '1': 3
+`Rolling 1 die: 4
+Rolling 2 dice in a cup: 8
+Rolling 6 dice in a cup: 23
+Rolling 12 dice in a cup: 41
+Rolling 120 dice in a cup: 415
+Rolling a loaded die set to '1': 1
+Rolling a loaded die set to '1': 3`
