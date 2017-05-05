@@ -19,3 +19,10 @@ Rolling 120 dice in a cup: 415
 Rolling a loaded die set to '1': 1
 Rolling a loaded die set to '1': 3
 ```
+
+# Notes from the reviewer
+
+- Everything is in one file, when it should be one class per file or *almost* one class per file.
+- Code is squashed together and should be formatted better.
+- Testing occurs inline, but should use Test::Unit or rspec.
+- Can't add loaded dice to cup.
