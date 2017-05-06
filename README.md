@@ -26,3 +26,4 @@ Rolling a loaded die set to '1': 3
 - Code is squashed together and should be formatted better.
 - Testing occurs inline, but should use Test::Unit or rspec.
 - Can't add loaded dice to cup.
+- Comments acknowledge that loaded die hit set number more than 50% of the time. Try to fix it.
