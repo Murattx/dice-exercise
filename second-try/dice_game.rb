@@ -1,58 +1,8 @@
 # Coding exercise for [REDACTED]
 
-class Die
-
-  def initialize(sides)
-    @sides = sides
-  end
-
-  def roll
-    1 + rand(@sides)
-  end
-
-end
-
-class LoadedDie < Die
-
-  def initialize(sides, setTo)
-    super(sides)
-    @setTo = setTo
-  end
-
-  attr_reader :setTo
-
-  def roll
-    if rand(2) == 0
-      # Exclude final number from random range. If result equals the @setTo value, return the excluded number instead.
-      loadedRoll = 1 + rand(@sides - 1)
-      loadedRoll != @setTo ? loadedRoll : @sides
-    else
-      @setTo
-    end
-  end
-
-end
-
-class Cup
-
-  def initialize(startingNum)
-    @dice = []
-    @rollNum = 0
-    startingNum.times { @dice.push(Die.new(6)) }
-  end
-
-  def addDice(diceNum)
-    diceNum.times { @dice.push(Die.new(6)) }
-    return self
-  end
-
-  def roll
-    @dice.each { |die| @rollNum += die.roll }
-    puts "Rolling #{@dice.length} dice in a cup: #{@rollNum}"
-  end
-
-end
-
+require_relative 'dice_game/die'
+require_relative 'dice_game/loaded_die'
+require_relative 'dice_game/cup'
 
 # A method to test the frequency of the set number when rolling a loaded die. Answer seems to approach 58% so this seems not to be a perfect answer.
 def testLoadedDie(rollNum, setTo)
