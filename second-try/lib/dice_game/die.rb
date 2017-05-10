@@ -4,6 +4,8 @@ class Die
     @sides = sides
   end
 
+  attr_reader :sides
+
   def roll
     1 + rand(@sides)
   end
